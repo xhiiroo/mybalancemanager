@@ -34,3 +34,7 @@ td.tddatetimecenter{
 td.tdcurrencyalign{
     text-align: right;
 }
+
+.test tr:nth-child(even){
+    background-color: aquamarine;
+}
