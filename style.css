@@ -26,3 +26,11 @@ a:hover{
 a:active{
     text-decoration: underline;
   }
+
+td.tddatetimecenter{
+    text-align: center;
+}
+
+td.tdcurrencyalign{
+    text-align: right;
+}
