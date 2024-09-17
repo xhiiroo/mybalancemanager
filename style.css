@@ -25,26 +25,44 @@ a:visited {
   color: #666666;
 }
 
-a:hover{
-  color: #95ADE3;  
+a:hover {
+  color: #95ade3;
 }
 
-a:active{
-    text-decoration: underline;
-  }
-
-td.tddatetimecenter{
-    text-align: center;
+a:active {
+  text-decoration: underline;
 }
 
-td.tdcurrencyalign{
-    text-align: right;
+td.tddatetimecenter {
+  text-align: center;
+}
+
+td.tdcurrencyalign {
+  text-align: right;
+}
+
+div.dacc {
+  width: 29%;
+  height: 330px;
+  overflow: scroll;
+}
+
+div.dtrack {
+  width: 50%;
+  height: 415px;
+  overflow: scroll;
+}
+
+.sticky thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .evbgclr th {
   background-color: #7093fa;
 }
 
-.evbgclr tr:nth-child(even){
-    background-color: #bac4e0;
+.evbgclr tr:nth-child(even) {
+  background-color: #bac4e0;
 }
