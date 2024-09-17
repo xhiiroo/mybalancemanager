@@ -4,122 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Balance Manager</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <table width="100%">
-      <tr>
-        <td width="82%"><h2 class="hometitle">My Balance Manager</h2></td>
-        <td align="right"><a href="">Home</a></td>
-        <td align="right"><a href="">Settings</a></td>
-        <td align="right"><a href="">About</a></td>
-      </tr>
-    </table>
+    <div class="head">
+      <h2 class="hometitle">My Balance Manager</h2>
+    </div>
+
+    <div class="head">
+      <a href="">Home</a>
+      <a href=""> | Settings</a>
+      <a href=""> | About</a>
+    </div>
 
     <hr />
 
-    <table width="100%">
-      <tr>
-        <td width="83%">My Balance Amount : Rp 10.000.000</td>
-        <td align="right"><button type="button">New Transc</button></td>
-        <td align="right"><button type="button">See History</button></td>
-      </tr>
-    </table>
+    <div class="subhead">
+      <p>My Balance Amount : Rp 10.000.000</p>
+      <button type="button">New Transc</button>
+      <button type="button">See History</button>
+    </div>
 
-    <hr>
+    <hr />
 
-    <label for=""><u>My Account</u></label>
-    <table cellpadding="6">
-      <tr>
-        <td>Dompet</td>
-        <td>:</td>
-        <td>Rp</td>
-        <td class="tdcurrencyalign">200.000</td>
-        <td><a href="">details</a></td>
-      </tr>
-
-      <tr>
-        <td>BCA</td>
-        <td>:</td>
-        <td>Rp</td>
-        <td class="tdcurrencyalign">5.400.000</td>
-        <td><a href="">details</a></td>
-      </tr>
-
-      <tr></tr>
-        <td>OVO</td>
-        <td>:</td>
-        <td>Rp</td>
-        <td class="tdcurrencyalign">1.000.000</td>
-        <td><a href="">details</a></td>
-      </tr>
-
-      <tr></tr>
-        <td>Seabank</td>
-        <td>:</td>
-        <td>Rp</td>
-        <td class="tdcurrencyalign">3.400.000</td>
-        <td><a href="">details</a></td>
-      </tr>
-    </table>
-
-    <hr>
-
-    <label for=""><u>Daily Tracking</u></label>
-    <table border="1" cellpadding="6" class="test">
+    <div>
+      <p><u>My Account</u></p>
+      <table cellpadding="6">
         <tr>
-            <th>Tanggal</th>
-            <th>Waktu</th>
-            <th>Account</th>
-            <th>Nominal</th>
-            <th>Tujuan</th>
-            <th>Keterangan</th>
-        </tr>
-  
-        <tr>
-            <td class="tddatetimecenter">16/09/24</td>
-            <td class="tddatetimecenter">18:20</td>
-            <td>BCA</td>
-            <td align="right">-200.000</td>
-            <td>Belanja</td>
-            <td>Belanja dan makan malam ke Sun Plaza</td>
+          <td>Dompet</td>
+          <td>:</td>
+          <td>Rp</td>
+          <td class="tdcurrencyalign">200.000</td>
+          <td><a href="">details</a></td>
         </tr>
 
         <tr>
-            <td class="tddatetimecenter">16/09/24</td>
-            <td class="tddatetimecenter">13:20</td>
-            <td>OVO</td>
-            <td align="right">50.000</td>
-            <td>Piutang</td>
-            <td>Pinjaman kimo minggu lalu</td>
+          <td>BCA</td>
+          <td>:</td>
+          <td>Rp</td>
+          <td class="tdcurrencyalign">5.400.000</td>
+          <td><a href="">details</a></td>
         </tr>
 
         <tr>
-            <td class="tddatetimecenter">16/09/24</td>
-            <td class="tddatetimecenter">20:00</td>
-            <td>Dompet</td>
-            <td align="right">-10.000</td>
-            <td>Jajan</td>
-            <td>Beli nasi sarapan</td>
+          <td>OVO</td>
+          <td>:</td>
+          <td>Rp</td>
+          <td class="tdcurrencyalign">1.000.000</td>
+          <td><a href="">details</a></td>
         </tr>
 
         <tr>
-            <td class="tddatetimecenter">15/09/24</td>
-            <td class="tddatetimecenter">15:00</td>
-            <td>Dompet</td>
-            <td align="right">-5.000</td>
-            <td>Jajan</td>
-            <td>Ngopi</td>
-        </tr>
-
-        <tr>
-            <td class="tddatetimecenter">15/09/24</td>
-            <td class="tddatetimecenter">12:00</td>
-            <td>Dompet</td>
-            <td align="right">500.000</td>
-            <td>Bonus</td>
-            <td>Bonus bulanan dari kantor</td>
+          <td>Seabank</td>
+          <td>:</td>
+          <td>Rp</td>
+          <td class="tdcurrencyalign">3.400.000</td>
+          <td><a href="">details</a></td>
         </tr>
       </table>
+    </div>
+
+    <hr />
+
+    <div>
+      <p><u>Daily Tracking</u></p>
+      <table border="1" cellpadding="6" class="evbgclr">
+        <tr>
+          <th>Tanggal</th>
+          <th>Waktu</th>
+          <th>Account</th>
+          <th>Nominal</th>
+          <th>Tujuan</th>
+          <th>Keterangan</th>
+        </tr>
+
+        <tr>
+          <td class="tddatetimecenter">16/09/24</td>
+          <td class="tddatetimecenter">18:20</td>
+          <td>BCA</td>
+          <td align="right">-200.000</td>
+          <td>Belanja</td>
+          <td>Belanja dan makan malam ke Sun Plaza</td>
+        </tr>
+
+        <tr>
+          <td class="tddatetimecenter">16/09/24</td>
+          <td class="tddatetimecenter">13:20</td>
+          <td>OVO</td>
+          <td align="right">50.000</td>
+          <td>Piutang</td>
+          <td>Pinjaman kimo minggu lalu</td>
+        </tr>
+
+        <tr>
+          <td class="tddatetimecenter">16/09/24</td>
+          <td class="tddatetimecenter">20:00</td>
+          <td>Dompet</td>
+          <td align="right">-10.000</td>
+          <td>Jajan</td>
+          <td>Beli nasi sarapan</td>
+        </tr>
+
+        <tr>
+          <td class="tddatetimecenter">15/09/24</td>
+          <td class="tddatetimecenter">15:00</td>
+          <td>Dompet</td>
+          <td align="right">-5.000</td>
+          <td>Jajan</td>
+          <td>Ngopi</td>
+        </tr>
+
+        <tr>
+          <td class="tddatetimecenter">15/09/24</td>
+          <td class="tddatetimecenter">12:00</td>
+          <td>Dompet</td>
+          <td align="right">500.000</td>
+          <td>Bonus</td>
+          <td>Bonus bulanan dari kantor</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>

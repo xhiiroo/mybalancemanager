@@ -7,6 +7,12 @@ h2.hometitle {
   color: #3085b0;
 }
 
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -35,6 +41,10 @@ td.tdcurrencyalign{
     text-align: right;
 }
 
-.test tr:nth-child(even){
-    background-color: aquamarine;
+.evbgclr th {
+  background-color: #7093fa;
+}
+
+.evbgclr tr:nth-child(even){
+    background-color: #bac4e0;
 }
