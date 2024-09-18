@@ -144,6 +144,7 @@ body {
 
 div.header {
   text-align: center;
+  margin: auto;
 }
 
 h2.hometitle {
@@ -154,7 +155,7 @@ h2.hometitle {
 
 .header ul li {
   display: inline-block;
-  margin: 20px 30px 0px 0px;
+  margin: 20px 15px 0px 15px;
 }
 
 div.subhead {
