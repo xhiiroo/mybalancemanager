@@ -249,6 +249,11 @@ table {
   width: 100%;
 }
 
+div.footer {
+  text-align: center;
+  color: #666666;
+}
+
 .evbgclr th,
 td {
   border: 1px solid black;
