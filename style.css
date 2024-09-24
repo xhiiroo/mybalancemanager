@@ -189,7 +189,7 @@ a:visited {
 }
 
 a:hover {
-  color: #95ade3;
+  color: #5084ff;
 }
 
 a:active {
@@ -281,8 +281,16 @@ td {
   background-color: #bac4e0;
 }
 
+.evbgclr tr.highlight {
+  background-color: lightgreen !important;
+}
+
 .cf::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.highlight {
+  background-color: lightgreen;
 }
