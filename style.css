@@ -176,6 +176,10 @@ a {
   text-decoration: none;
 }
 
+td.aref {
+  text-align: center;
+}
+
 a:link {
   color: #666666;
 }
