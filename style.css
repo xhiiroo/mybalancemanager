@@ -1,297 +1,67 @@
-@font-face {
-    font-family: 'Montserrat';
-    src: url('font/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+/* Custom CSS */
 body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  padding-bottom: 60px;
 }
 
-/* Style */
-
-body {
-  font-family: "Montserrat";
-  background-color: #e0ebeb;
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin .25s ease-out;
 }
 
-.container {
-  width: 80%;
-  padding: 30px;
-  margin: auto;
-  background-color: white;
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
 }
 
-div.header {
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+/* Hide sidebar on small screens (SM and below) */
+@media (max-width: 576px) {
+  #sidebar-wrapper {
+      display: none;
+  }
+}
+
+/* Bottom navbar customization */
+.navbar.fixed-bottom {
+  height: 60px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav {
+  flex-direction: row !important; /* Pastikan flex direction adalah row */
+}
+
+.navbar-nav .nav-link {
   text-align: center;
-  margin: auto;
+  padding: 15px 0;
 }
 
-h2.hometitle {
-  color: #3085b0;
-  font-size: 30px;
-  font-weight: bold;
+.nav-item {
+  flex-grow: 1;
 }
 
-.header ul li {
-  display: inline-block;
-  margin: 20px 15px 0px 15px;
+@media (max-width: 576px) {
+  #sidebar-wrapper {
+      display: none;
+  }
+  .navbar.fixed-bottom {
+      display: flex;
+  }
 }
 
-div.subhead {
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-.subhead p {
-  margin-bottom: 20px;
-}
-
-.subhead button {
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-td.aref {
-  text-align: center;
-}
-
-a:link {
-  color: #666666;
-}
-
-a:visited {
-  color: #666666;
-}
-
-a:hover {
-  color: #5084ff;
-}
-
-a:active {
-  text-decoration: underline;
-}
-
-td.tddatetimecenter {
-  text-align: center;
-}
-
-td.tdcurrencyalign {
-  text-align: right;
-}
-
-.phome {
-  border-top: 5px solid salmon;
-  border-bottom: 5px solid salmon;
-  margin-bottom: 10px;
-  padding: 5px 0px;
-  width: 25%;
-  text-align: center;
-}
-
-div.dacc {
-  width: 80%;
-  height: 330px;
-  margin-bottom: 50px;
-  overflow: auto;
-}
-
-div.dbudget {
-  width: 100%;
-  height: 330px;
-  margin-bottom: 50px;
-  overflow: auto;
-}
-
-div.dtrack {
-  width: 100%;
-  height: 415px;
-  margin-bottom: 50px;
-  overflow: auto;
-}
-
-div.main1 {
-  width: 100%;
-  overflow: hidden;
-}
-
-div.mleft {
-  float: left;
-  width: 50%;
-}
-
-div.mright {
-  float: right;
-  width: 50%;
-}
-
-table {
-  width: 100%;
-}
-
-div.footer {
-  text-align: center;
-  color: #666666;
-}
-
-.evbgclr th,
-td {
-  border: 1px solid black;
-  padding: 8px;
-}
-
-.sticky thead {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.evbgclr th {
-  background-color: #7093fa;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.evbgclr tr:nth-child(even) {
-  background-color: #bac4e0;
-}
-
-.evbgclr tr.highlight {
-  background-color: lightgreen !important;
-}
-
-.cf::after {
-  content: "";
-  display: table;
-  clear: both;
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }

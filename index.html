@@ -3,482 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Balance Manager</title>
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard Admin Keuangan</title>
+    <link
+      href="bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h2 class="hometitle">My Balance Manager</h2>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Settings</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </div>
-
-      <div class="subhead">
-        <p>My Balance Amount : Rp 10.000.000</p>
-        <button type="button">New Transc</button>
-        <button type="button">See History</button>
-      </div>
-
-      <div class="main1">
-        <div class="mleft">
-          <p class="phome">My Account</p>
-          <div class="dacc">
-            <table border="1" cellpadding="6" class="evbgclr sticky">
-              <thead>
-                <tr>
-                  <th>Nama Account</th>
-                  <th colspan="4">Bal. Amount</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Dompet</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>BCA</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">5.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>OVO</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Seabank</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">100.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Dompet</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>BCA</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">15.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>OVO</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Danamon</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">3.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Dompet</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>BCA</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">5.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>OVO</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Seabank</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">100.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Dompet</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>BCA</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">15.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>OVO</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Danamon</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">3.400.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-dark border-right d-none d-sm-block" id="sidebar-wrapper">
+        <div class="sidebar-heading text-white">Admin Keuangan</div>
+        <div class="list-group list-group-flush">
+          <a
+            href="#"
+            class="list-group-item list-group-item-action bg-dark text-white"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="list-group-item list-group-item-action bg-dark text-white"
+            >Transaksi</a
+          >
+          <a
+            href="#"
+            class="list-group-item list-group-item-action bg-dark text-white"
+            >Laporan</a
+          >
+          <a
+            href="#"
+            class="list-group-item list-group-item-action bg-dark text-white"
+            >Pengaturan</a
+          >
         </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
 
-        <div class="mright">
-          <p class="phome">My Budget</p>
-          <div class="dbudget">
-            <table border="1" cellpadding="6" class="evbgclr sticky">
-              <thead>
-                <tr>
-                  <th>Nama Budget</th>
-                  <th>Tipe</th>
-                  <th colspan="2">Beg Bal</th>
-                  <th colspan="3">End Bal</th>
-                </tr>
-              </thead>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <nav
+          class="d-none d-sm-block navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        </nav>
 
-              <tbody>
-                <tr>
-                  <td>Pribadi</td>
-                  <td>Mingguan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">50.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
+        <div class="container-fluid">
+          <h1 class="mt-4">Dashboard Pengelolaan Keuangan</h1>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card text-white bg-primary">
+                <div class="card-body">
+                  <h5 class="card-title">Total Pemasukan</h5>
+                  <p class="card-text">Rp. 100.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card text-white bg-success">
+                <div class="card-body">
+                  <h5 class="card-title">Total Pengeluaran</h5>
+                  <p class="card-text">Rp. 50.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title">Saldo Saat Ini</h5>
+                  <p class="card-text">Rp. 50.000.000</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                <tr>
-                  <td>Badminton</td>
-                  <td>Mingguan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">100.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">100.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Bensin Honda</td>
-                  <td>Bulanan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">120.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">90.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Keperluan Rumah</td>
-                  <td>Mingguan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">1.000.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Holiday</td>
-                  <td>Mingguan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">50.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Hang Out</td>
-                  <td>Mingguan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">50.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Kesehatan</td>
-                  <td>Bulanan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">50.000</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-
-                <tr>
-                  <td>Donasi</td>
-                  <td>Bulanan</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">200.000</td>
-                  <td>Rp</td>
-                  <td class="tdcurrencyalign">0</td>
-                  <td class="aref"><a href="">details</a></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header">Grafik Pemasukan & Pengeluaran</div>
+                <div class="card-body">
+                  <canvas id="financeChart"></canvas>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div>
-        <p class="phome">Daily Tracking</p>
-        <div class="dtrack">
-          <table border="1" cellpadding="6" class="evbgclr sticky">
-            <thead>
-              <tr>
-                <th>Tanggal</th>
-                <th>Waktu</th>
-                <th>Account</th>
-                <th>Nominal</th>
-                <th>Tujuan</th>
-                <th>Keterangan</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">18:20</td>
-                <td>BCA</td>
-                <td align="right">-200.000</td>
-                <td>Belanja</td>
-                <td>Belanja dan makan malam ke Sun Plaza</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">13:20</td>
-                <td>OVO</td>
-                <td align="right">50.000</td>
-                <td>Piutang</td>
-                <td>Pinjaman kimo minggu lalu</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">20:00</td>
-                <td>Dompet</td>
-                <td align="right">-10.000</td>
-                <td>Jajan</td>
-                <td>Beli nasi sarapan</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">15:00</td>
-                <td>Dompet</td>
-                <td align="right">-5.000</td>
-                <td>Jajan</td>
-                <td>Ngopi</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">12:00</td>
-                <td>Dompet</td>
-                <td align="right">500.000</td>
-                <td>Bonus</td>
-                <td>Bonus bulanan dari kantor</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">18:20</td>
-                <td>BCA</td>
-                <td align="right">-200.000</td>
-                <td>Belanja</td>
-                <td>Belanja dan makan malam ke Sun Plaza</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">13:20</td>
-                <td>OVO</td>
-                <td align="right">50.000</td>
-                <td>Piutang</td>
-                <td>Pinjaman kimo minggu lalu</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">20:00</td>
-                <td>Dompet</td>
-                <td align="right">-10.000</td>
-                <td>Jajan</td>
-                <td>Beli nasi sarapan</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">15:00</td>
-                <td>Dompet</td>
-                <td align="right">-5.000</td>
-                <td>Jajan</td>
-                <td>Ngopi</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">12:00</td>
-                <td>Dompet</td>
-                <td align="right">500.000</td>
-                <td>Bonus</td>
-                <td>Bonus bulanan dari kantor</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">18:20</td>
-                <td>BCA</td>
-                <td align="right">-200.000</td>
-                <td>Belanja</td>
-                <td>Belanja dan makan malam ke Sun Plaza</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">13:20</td>
-                <td>OVO</td>
-                <td align="right">50.000</td>
-                <td>Piutang</td>
-                <td>Pinjaman kimo minggu lalu</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">20:00</td>
-                <td>Dompet</td>
-                <td align="right">-10.000</td>
-                <td>Jajan</td>
-                <td>Beli nasi sarapan</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">15:00</td>
-                <td>Dompet</td>
-                <td align="right">-5.000</td>
-                <td>Jajan</td>
-                <td>Ngopi</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">12:00</td>
-                <td>Dompet</td>
-                <td align="right">500.000</td>
-                <td>Bonus</td>
-                <td>Bonus bulanan dari kantor</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">18:20</td>
-                <td>BCA</td>
-                <td align="right">-200.000</td>
-                <td>Belanja</td>
-                <td>Belanja dan makan malam ke Sun Plaza</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">13:20</td>
-                <td>OVO</td>
-                <td align="right">50.000</td>
-                <td>Piutang</td>
-                <td>Pinjaman kimo minggu lalu</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">16/09/24</td>
-                <td class="tddatetimecenter">20:00</td>
-                <td>Dompet</td>
-                <td align="right">-10.000</td>
-                <td>Jajan</td>
-                <td>Beli nasi sarapan</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">15:00</td>
-                <td>Dompet</td>
-                <td align="right">-5.000</td>
-                <td>Jajan</td>
-                <td>Ngopi</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-
-              <tr>
-                <td class="tddatetimecenter">15/09/24</td>
-                <td class="tddatetimecenter">12:00</td>
-                <td>Dompet</td>
-                <td align="right">500.000</td>
-                <td>Bonus</td>
-                <td>Bonus bulanan dari kantor</td>
-                <td class="aref"><a href="">View</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>© 2024 Xhiiroo Project | +62 852 7729 8750</p>
-      </div>
+      <!-- /#page-content-wrapper -->
     </div>
 
-    <script src="script.js"></script>
+    <!-- Bottom Navbar (visible only on small devices) -->
+    <nav class="navbar navbar-dark bg-dark fixed-bottom d-flex d-sm-none">
+      <ul class="navbar-nav nav-justified w-100 d-flex justify-content-around">
+        <li class="nav-item flex-grow-1">
+          <a class="nav-link text-white" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item flex-grow-1">
+          <a class="nav-link text-white" href="#">Transaksi</a>
+        </li>
+        <li class="nav-item flex-grow-1">
+          <a class="nav-link text-white" href="#">Laporan</a>
+        </li>
+        <li class="nav-item flex-grow-1">
+          <a class="nav-link text-white" href="#">Pengaturan</a>
+        </li>
+      </ul>
+    </nav>
+
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
