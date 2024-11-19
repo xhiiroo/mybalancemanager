@@ -73,13 +73,13 @@ if (financeCanvas) {
 // Set current year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Menampilkan tombol saat scroll melewati 300px
+// Menampilkan tombol saat scroll melewati 70px
 const toTopButton = document.getElementById('toTopButton');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    toTopButton.style.display = 'block';
+  if (window.scrollY > 70) {
+    toTopButton.classList.add('show'); // Tambahkan kelas "show" untuk animasi masuk
   } else {
-    toTopButton.style.display = 'none';
+    toTopButton.classList.remove('show'); // Hapus kelas "show" untuk animasi keluar
   }
 });
 
