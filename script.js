@@ -69,3 +69,21 @@ if (financeCanvas) {
 } else {
     console.warn("Elemen canvas untuk financeChart tidak ditemukan.");
 }
+
+// Set current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Menampilkan tombol saat scroll melewati 300px
+const toTopButton = document.getElementById('toTopButton');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    toTopButton.style.display = 'block';
+  } else {
+    toTopButton.style.display = 'none';
+  }
+});
+
+// Scroll ke atas saat tombol diklik
+toTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

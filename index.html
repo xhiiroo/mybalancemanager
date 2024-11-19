@@ -4,37 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard Admin Keuangan</title>
+    <title>My Balance Manager</title>
     <link
-      href="bootstrap-5.3.3-dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="d-flex" id="wrapper">
       <!-- Sidebar -->
-      <div class="bg-dark border-right d-none d-sm-block" id="sidebar-wrapper">
-        <div class="sidebar-heading text-white">Admin Keuangan</div>
+      <div class="bg-info border-right d-none d-sm-block" id="sidebar-wrapper">
+        <div class="sidebar-heading text-white">My Balance Manager</div>
         <div class="list-group list-group-flush">
           <a
             href="#"
-            class="list-group-item list-group-item-action bg-dark text-white"
+            class="list-group-item list-group-item-action bg-info text-white"
             >Dashboard</a
           >
           <a
             href="#"
-            class="list-group-item list-group-item-action bg-dark text-white"
+            class="list-group-item list-group-item-action bg-info text-white"
             >Transaksi</a
           >
           <a
             href="#"
-            class="list-group-item list-group-item-action bg-dark text-white"
+            class="list-group-item list-group-item-action bg-info text-white"
             >Laporan</a
           >
           <a
             href="#"
-            class="list-group-item list-group-item-action bg-dark text-white"
+            class="list-group-item list-group-item-action bg-info text-white"
             >Pengaturan</a
           >
         </div>
@@ -46,11 +47,13 @@
         <nav
           class="d-none d-sm-block navbar navbar-expand-lg navbar-light bg-light border-bottom"
         >
-          <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+          <button class="btn" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </nav>
 
         <div class="container-fluid">
-          <h1 class="mt-4">Dashboard Pengelolaan Keuangan</h1>
+          <h1 class="mt-4">Balance's Dashboard</h1>
           <div class="row">
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card text-white bg-primary">
@@ -87,8 +90,54 @@
                 </div>
               </div>
             </div>
+
+            <!-- Cash Account -->
+            <div style="float: right; width: 250px">
+              <div class="card">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Cash Account</th>
+                      <th scope="col">Nominal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dompet</td>
+                      <td>100,000</td>
+                    </tr>
+                    <tr>
+                      <td>BCA</td>
+                      <td>500,000</td>
+                    </tr>
+                    <tr>
+                      <td>Gopay</td>
+                      <td>150,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
+
+          <button id="toTopButton" class="btn btn-primary rounded-circle">
+            ↑
+          </button>
         </div>
+
+        <!-- Footer -->
+        <footer class="bg-light text-center py-3">
+          <div class="container">
+            <p class="mb-0">
+              &copy; <span id="year"></span> My Balance Manager. All Rights
+              Reserved.
+            </p>
+            <p class="mb-0">
+              <a href="#" class="me-3">Privacy Policy</a>
+              <a href="#" class="">Terms of Service</a>
+            </p>
+          </div>
+        </footer>
       </div>
       <!-- /#page-content-wrapper -->
     </div>
