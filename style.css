@@ -1,30 +1,53 @@
-/* Custom CSS */
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  transition: margin 0.25s ease-out;
+body {
+  margin: 0;
+  overflow-x: hidden; /* Cegah scroll horizontal */
 }
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+.layout {
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  transition: transform 0.3s ease-in-out; /* Animasi saat geser */
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
+.sidebar {
+  width: 250px;
+  color: white;
+  height: 100vh; /* Sidebar penuh tinggi layar */
+  position: fixed; /* Tetap di posisi */
+  top: 0;
+  left: 0;
+  transform: translateX(-100%); /* Awalnya sembunyi */
+  transition: transform 0.3s ease-in-out; /* Animasi geser */
 }
 
-#page-content-wrapper {
-  min-width: 100vw;
+.sidebar.open {
+  transform: translateX(0); /* Geser ke posisi terlihat */
 }
 
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
+.main-content {
+  flex: 1; /* Buat konten utama menyesuaikan lebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out; /* Animasi untuk geser konten */
+}
+
+.sidebar.open ~ .main-content {
+  margin-left: 250px; /* Geser konten ke kanan sebesar lebar sidebar */
+}
+
+#menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  transition: margin-left 0.3s ease-in-out; /* Tambahkan animasi untuk margin */
+}
+
+.sidebar.open ~ .main-content #menu-toggle {
+  margin-left: 271px; /* Geser tombol ke kanan */
 }
 
 /* Hide sidebar on small screens (SM and below) */
 @media (max-width: 576px) {
-  #sidebar-wrapper {
+  #sidebar {
     display: none;
   }
 
@@ -32,7 +55,7 @@
     padding-bottom: 60px;
   }
 
-  #sidebar-wrapper {
+  #sidebar {
     display: none;
   }
 

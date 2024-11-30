@@ -1,12 +1,26 @@
 // Toggle menu wrapper
-const menuToggle = document.getElementById("menu-toggle");
-const wrapper = document.getElementById("wrapper");
+// const menuToggle = document.getElementById("menu-toggle");
+// const wrapper = document.getElementById("wrapper");
 
-if (menuToggle && wrapper) {
-    menuToggle.addEventListener("click", function() {
-        wrapper.classList.toggle("toggled");
-    });
-}
+// if (menuToggle && wrapper) {
+//     menuToggle.addEventListener("click", function() {
+//         wrapper.classList.toggle("toggled");
+//     });
+// }
+
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+  
+  // Atur margin-left tombol berdasarkan status sidebar
+  if (sidebar.classList.contains("open")) {
+    menuToggle.style.marginLeft = "271px";
+  } else {
+    menuToggle.style.marginLeft = "10px"; // Kembali ke posisi awal
+  }
+});
 
 // Inisialisasi Chart.js untuk menampilkan grafik
 const financeCanvas = document.getElementById('financeChart');
