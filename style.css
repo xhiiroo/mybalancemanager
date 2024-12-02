@@ -23,6 +23,11 @@ body {
   transform: translateX(0); /* Geser ke posisi terlihat */
 }
 
+#sidebar .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
 .main-content {
   flex: 1; /* Buat konten utama menyesuaikan lebar */
   padding: 20px;
