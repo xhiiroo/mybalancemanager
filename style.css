@@ -17,6 +17,7 @@ body {
   left: 0;
   transform: translateX(-100%); /* Awalnya sembunyi */
   transition: transform 0.3s ease-in-out; /* Animasi geser */
+  z-index: 1050;
 }
 
 .sidebar.open {
@@ -39,10 +40,6 @@ body {
 }
 
 #menu-toggle {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
   transition: margin-left 0.3s ease-in-out; /* Tambahkan animasi untuk margin */
 }
 
