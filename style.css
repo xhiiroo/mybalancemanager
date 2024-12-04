@@ -1,6 +1,16 @@
+/* @font-face {
+  font-family: 'Montserrat';
+  src: url('font/Montserrat/transfonter/Montserrat-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+} */
+
 body {
   margin: 0;
   overflow-x: hidden; /* Cegah scroll horizontal */
+  /* font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal; */
 }
 
 .layout {
