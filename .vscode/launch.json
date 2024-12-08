@@ -10,6 +10,15 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost/mybalancemanager",
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,  // Port yang sama dengan yang ada di konfigurasi Xdebug
+            "pathMappings": {
+                "C:/xampp/htdocs/mybalancemanager": "${workspaceFolder}"
+            }
         }
     ]
 }
