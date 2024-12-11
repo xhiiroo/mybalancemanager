@@ -5,7 +5,25 @@ session_start();
 // include_once("function/koneksi.php");
 // include_once("function/helper.php");
 
-$page = isset($_GET['page']) ? $_GET['page'] : false;
+$page = isset($_GET['page']) ? $_GET['page'] : 'main';
+
+$lgotomain = 'http://' . $_SERVER['HTTP_HOST'] . '/mybalancemanager';
+$ltransaksi = 'index.php?page=transaksi';
+$llaporan = 'index.php?page=laporan';
+$lgendefault = 'index.php?page=gendefault';
+$lpgnotfound = 'index.php?page=pgnotfound';
+
+$tdashboard = 'Dashboard';
+$ttransaksi = 'Transaksi';
+$tlaporan = 'laporan';
+$tgendefault = 'General Defaults';
+
+$_SESSION['lgotomain'] = $lgotomain;
+
+$_SESSION['tdashboard'] = $tdashboard;
+$_SESSION['ttransaksi'] = $ttransaksi;
+$_SESSION['tlaporan'] = $tlaporan;
+$_SESSION['tgendefault'] = $tgendefault;
 
 ?>
 
@@ -32,17 +50,17 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
       <div class="sidebar-heading text-white">My Balance Manager</div>
       <div class="list-group list-group-flush">
         <a
-          href="#"
-          class="list-group-item list-group-item-action bg-info text-white">Dashboard</a>
+          href="<?php echo $lgotomain; ?>"
+          class="list-group-item list-group-item-action bg-info text-white"><?php echo $tdashboard ?></a>
         <a
-          href="#"
-          class="list-group-item list-group-item-action bg-info text-white">Transaksi</a>
+          href="<?php echo $ltransaksi; ?>"
+          class="list-group-item list-group-item-action bg-info text-white"><?php echo htmlspecialchars($ttransaksi); ?></a>
         <a
-          href="#"
-          class="list-group-item list-group-item-action bg-info text-white">Laporan</a>
+          href="<?php echo $llaporan; ?>"
+          class="list-group-item list-group-item-action bg-info text-white"><?php echo htmlspecialchars($tlaporan); ?></a>
         <a
-          href="#"
-          class="list-group-item list-group-item-action bg-info text-white">Pengaturan</a>
+          href="<?php echo $lgendefault; ?>"
+          class="list-group-item list-group-item-action bg-info text-white"><?php echo htmlspecialchars($tgendefault); ?></a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -57,7 +75,8 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
       </nav>
 
       <!-- Dynamic Content -->
-      <div class="container-fluid">
+      <div class="container-fluid mt-0 mt-sm-5">
+        <h3 class="d-sm-none mb-4"><u>My Balance Manager</u></h3>
         <?php
 
         $filename = "$page.php";
@@ -65,7 +84,8 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
         if (file_exists($filename)) {
           include_once($filename);
         } else {
-          include_once("main.php");
+            header("Location: $lpgnotfound");
+            exit();
         }
         ?>
       </div>
@@ -95,16 +115,16 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
   <nav class="navbar navbar-dark bg-dark fixed-bottom d-flex d-sm-none">
     <ul class="navbar-nav nav-justified w-100 d-flex justify-content-around">
       <li class="nav-item flex-grow-1">
-        <a class="nav-link text-white" href="#">Dashboard</a>
+        <a class="nav-link text-white" href="<?php echo $lgotomain; ?>"><?php echo $tdashboard ?></a>
       </li>
       <li class="nav-item flex-grow-1">
-        <a class="nav-link text-white" href="#">Transaksi</a>
+        <a class="nav-link text-white" href="<?php echo $ltransaksi; ?>"><?php echo htmlspecialchars($ttransaksi); ?></a>
       </li>
       <li class="nav-item flex-grow-1">
-        <a class="nav-link text-white" href="#">Laporan</a>
+        <a class="nav-link text-white" href="<?php echo $llaporan; ?>"><?php echo htmlspecialchars($tlaporan); ?></a>
       </li>
       <li class="nav-item flex-grow-1">
-        <a class="nav-link text-white" href="#">Pengaturan</a>
+        <a class="nav-link text-white" href="<?php echo $lgendefault; ?>"><?php echo htmlspecialchars($tgendefault); ?></a>
       </li>
     </ul>
   </nav>
